@@ -25,7 +25,7 @@ fi
 git clone https://github.com/neovim/neovim.git --depth 1
 cd neovim
 make CMAKE_BUILD_TYPE=Release
-sudo make install
+make install
 popd
 
 # Backup existing neovim configuration if it exists
