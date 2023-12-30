@@ -7,8 +7,8 @@ pushd .install
 # Determine OS and install dependencies
 OS="$(uname)"
 if [ "$OS" = "Linux" ]; then
-    apt update
-    apt install cmake git gettext -y
+    sudo apt update
+    sudo apt install cmake git gettext -y
 elif [ "$OS" = "Darwin" ]; then
     # Install Homebrew if not installed
     which -s brew
@@ -25,7 +25,7 @@ fi
 git clone https://github.com/neovim/neovim.git --depth 1
 cd neovim
 make CMAKE_BUILD_TYPE=Release
-make install
+sudo make install
 popd
 
 # Backup existing neovim configuration if it exists
