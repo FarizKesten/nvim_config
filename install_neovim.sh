@@ -8,7 +8,7 @@ pushd .install
 OS="$(uname)"
 if [ "$OS" = "Linux" ]; then
     apt update
-    apt install cmake git -y
+    apt install cmake git gettext -y
 elif [ "$OS" = "Darwin" ]; then
     # Install Homebrew if not installed
     which -s brew
